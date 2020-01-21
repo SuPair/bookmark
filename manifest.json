@@ -1,0 +1,39 @@
+{
+  "name": "Ai书签",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "一款很不错的智能书签",
+  "icons" : {
+    "16" : "icon.png",
+    "48" : "icon.png",
+    "128" : "icon.png"
+  },
+  "browser_action": {
+    "default_title": "Ai书签",
+    "default_icon": {
+      "16":"imgs/bookmark-16.png",
+      "24":"imgs/bookmark-24.png",
+      "32":"imgs/bookmark-32.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.google.com/*"
+      ],
+      "css": [
+        "custom.css"ming'jie
+      ],
+      "js": [
+        "custom.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "cookies",
+    "notifications"
+  ]
+}
